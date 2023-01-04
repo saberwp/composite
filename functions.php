@@ -45,9 +45,14 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
-// Enable JSON uploads to media.
+// Enable SVG uploads to media.
 add_filter( 'upload_mimes', function ( $types ) {
 	$types['svg']  = 'image/svg+xml';
 	$types['json'] = 'text/plain';
 	return $types;
+});
+
+/* Add theme supports */
+add_action('after_setup_theme', function() {
+	add_theme_support('post-thumbnails');
 });
