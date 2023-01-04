@@ -1,5 +1,3 @@
 <?php get_header(); ?>
-<div class="p-4 border border-solid border-gray-500 h-80">
-	INDEX TEMPLATE
-</div>
+	<?php require_once(get_template_directory() . '/components/marketing/page-sections/feature-sections/offset-2x2-grid.php'); ?>
 <?php get_footer(); ?>

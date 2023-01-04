@@ -35,21 +35,15 @@
           <div class="mt-12 md:mt-0">
             <h3 class="text-base font-medium text-white">Support</h3>
             <ul role="list" class="mt-4 space-y-4">
-              <li>
-                <a href="#" class="text-base text-gray-300 hover:text-white">Pricing</a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-300 hover:text-white">Documentation</a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-300 hover:text-white">Guides</a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-300 hover:text-white">API Status</a>
-              </li>
+							<?php
+								$footer_menu_2 = get_field('footer_menu_2', 'option');
+								if( ! empty( $footer_menu_2 ) ) {
+									foreach( $footer_menu_2 as $footer_menu_2_link ) {
+							?>
+								<li>
+		          		<a href="<?php echo site_url($footer_menu_2_link['slug']); ?>" class="text-base text-gray-300 hover:text-white"><?php echo $footer_menu_2_link['title']; ?></a>
+								</li>
+							<?php } } ?>
             </ul>
           </div>
         </div>
@@ -57,41 +51,29 @@
           <div>
             <h3 class="text-base font-medium text-white">Company</h3>
             <ul role="list" class="mt-4 space-y-4">
-              <li>
-                <a href="#" class="text-base text-gray-300 hover:text-white">About</a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-300 hover:text-white">Blog</a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-300 hover:text-white">Jobs</a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-300 hover:text-white">Press</a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-300 hover:text-white">Partners</a>
-              </li>
+							<?php
+								$footer_menu_3 = get_field('footer_menu_3', 'option');
+								if( ! empty( $footer_menu_3 ) ) {
+									foreach( $footer_menu_3 as $footer_menu_3_link ) {
+							?>
+								<li>
+		          		<a href="<?php echo site_url($footer_menu_3_link['slug']); ?>" class="text-base text-gray-300 hover:text-white"><?php echo $footer_menu_3_link['title']; ?></a>
+								</li>
+							<?php } } ?>
             </ul>
           </div>
           <div class="mt-12 md:mt-0">
             <h3 class="text-base font-medium text-white">Legal</h3>
             <ul role="list" class="mt-4 space-y-4">
-              <li>
-                <a href="#" class="text-base text-gray-300 hover:text-white">Claim</a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-300 hover:text-white">Privacy</a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-300 hover:text-white">Terms</a>
-              </li>
+							<?php
+								$footer_menu_4 = get_field('footer_menu_4', 'option');
+								if( ! empty( $footer_menu_4 ) ) {
+									foreach( $footer_menu_4 as $footer_menu_4_link ) {
+							?>
+								<li>
+		          		<a href="<?php echo site_url($footer_menu_4_link['slug']); ?>" class="text-base text-gray-300 hover:text-white"><?php echo $footer_menu_4_link['title']; ?></a>
+								</li>
+							<?php } } ?>
             </ul>
           </div>
         </div>
@@ -114,7 +96,7 @@
 				<?php } } ?>
 
       </div>
-      <p class="mt-8 text-base text-gray-400 md:order-1 md:mt-0">&copy; 2020 <?php echo get_field('company_name','options'); ?>. All rights reserved.</p>
+      <p class="mt-8 text-base text-gray-400 md:order-1 md:mt-0">&copy; 2023 <?php echo get_field('company_name','options'); ?>. All rights reserved.</p>
     </div>
   </div>
 </footer>
