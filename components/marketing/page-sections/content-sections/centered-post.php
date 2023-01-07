@@ -1,5 +1,3 @@
-<?php global $post; ?>
-
 <div class="relative overflow-hidden bg-white py-16">
   <div class="hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full lg:[overflow-anchor:none]">
     <div class="relative mx-auto h-full max-w-prose text-lg" aria-hidden="true">
@@ -36,15 +34,15 @@
 					<?php the_category(); ?>
 				</span>
         <span class="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
-					<?php echo $post->post_title; ?>
+					<?php the_title(); ?>
 				</span>
       </h1>
       <p class="mt-8 text-xl leading-8 text-gray-500">
-				<?php echo get_field('summary', $post->ID); ?>
+				<?php the_excerpt(); ?>
 			</p>
     </div>
     <div class="prose prose-lg prose-indigo mx-auto mt-6 text-gray-500">
-      <?php echo $post->post_content; ?>
+      <?php the_content(); ?>
     </div>
   </div>
 </div>
