@@ -1,3 +1,3 @@
 <?php get_header(); ?>
-INDEX
+ARCHIVE
 <?php get_footer(); ?>

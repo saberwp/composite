@@ -49,12 +49,15 @@
                 <span class="sr-only">
 									<?php echo get_the_author_meta('display_name'); ?>
 								</span>
-                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-              </a>
+								<?php $author_image = get_field('author_image','user_1'); ?>
+								<?php if( $author_image && is_array( $author_image ) ) { ?>
+                	<img class="h-10 w-10 rounded-full" src="<?php echo $author_image['url']; ?>" alt="">
+								<?php } ?>
+							</a>
             </div>
             <div class="ml-3">
               <p class="text-sm font-medium text-gray-900">
-                <a href="#" class="hover:underline">
+                <a href="<?php echo site_url( 'author/' . get_the_author_meta('user_login') ); ?>" class="hover:underline">
 									<?php echo get_the_author_meta('display_name'); ?>
 								</a>
               </p>
