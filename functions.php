@@ -56,3 +56,11 @@ add_filter( 'upload_mimes', function ( $types ) {
 add_action('after_setup_theme', function() {
 	add_theme_support('post-thumbnails');
 });
+
+/* Do block registrations. */
+add_action('init', function() {
+	$result = register_block_type( get_template_directory() . '/blocks/offset-2x2-grid/block.json' );
+	if( ! $result ) {
+		var_dump( 'Block type could not regsie');
+	}
+});

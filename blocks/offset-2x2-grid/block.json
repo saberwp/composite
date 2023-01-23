@@ -1,0 +1,15 @@
+{
+  "name": "composite/offset-2x2-grid",
+  "title": "Feature Offset 2x2 Grid",
+  "description": "Renders a feature content section with a 2x2 grid.",
+  "style": [ "file:./style.css" ],
+	"editorStyle": "file:../../dist/output.css",
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["feature", "content", "grid", "composite"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "template.php"
+  },
+  "align": "full"
+}
