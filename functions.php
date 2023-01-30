@@ -74,3 +74,8 @@ add_action('init', function() {
 add_action('init', function() {
 	register_nav_menu('primary-menu',__( 'Primary Menu' ));
 });
+
+// Add all ACF fields defined in code. 
+add_action('init', function() {
+	require_once( get_template_directory() . '/fields/php/all-fields.php' );
+});
