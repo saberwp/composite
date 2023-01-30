@@ -7,14 +7,16 @@ $data->heading = get_field('heading'); // get_field('homepage_offset_2x2_grid_he
 $data->section_1_body = get_field('homepage_offset_2x2_grid_section_1_body', 'option');
 $data->features = get_field('features');
 
-foreach( $data->features as $index => $feature ) {
-	if( is_array( $feature['icon'] ) && $feature['icon']['mime_type'] === 'image/svg+xml' ) {
-		$filepath = get_attached_file( $feature['icon']['id'] );
-		ob_start();
-		require( $filepath );
-		$svg = ob_get_contents();
-		ob_end_clean();
-		$data->features[$index]['icon']['svg'] = $svg;
+if( is_array( $data->features ) && ! empty( $data->features ) ) {
+	foreach( $data->features as $index => $feature ) {
+		if( is_array( $feature['icon'] ) && $feature['icon']['mime_type'] === 'image/svg+xml' ) {
+			$filepath = get_attached_file( $feature['icon']['id'] );
+			ob_start();
+			require( $filepath );
+			$svg = ob_get_contents();
+			ob_end_clean();
+			$data->features[$index]['icon']['svg'] = $svg;
+		}
 	}
 }
 
