@@ -1,5 +1,8 @@
 <?php
 
+require_once( get_template_directory() . '/inc/ComponentData.php' );
+require_once( get_template_directory() . '/inc/MenuWalker.php' );
+
 add_action('wp_enqueue_scripts', function() {
 
 	wp_enqueue_style(
@@ -55,6 +58,7 @@ add_filter( 'upload_mimes', function ( $types ) {
 /* Add theme supports */
 add_action('after_setup_theme', function() {
 	add_theme_support('post-thumbnails');
+	add_theme_support('menus');
 });
 
 /* Do block registrations. */
@@ -63,4 +67,10 @@ add_action('init', function() {
 	if( ! $result ) {
 		var_dump( 'Block type could not regsie');
 	}
+});
+
+// Register menus.
+// See reference tutorial https://monsterspost.com/add-navigation-menus-wordpress-theme/.
+add_action('init', function() {
+	register_nav_menu('primary-menu',__( 'Primary Menu' ));
 });

@@ -41,5 +41,13 @@
 
       <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Company</a>
     </div>
+		<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'primary-menu',
+					'walker'         => new \Composite\MenuWalker()
+				)
+			);
+		?>
   </nav>
 </header>
