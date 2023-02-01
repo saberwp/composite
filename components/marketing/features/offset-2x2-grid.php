@@ -1,10 +1,7 @@
 <?php
 
-// @TODO provide a template that is full-width for posts and pages.
-
 $data = new ComponentData;
 $data->heading = get_field('heading'); // get_field('homepage_offset_2x2_grid_heading', 'option');
-$data->section_1_body = get_field('homepage_offset_2x2_grid_section_1_body', 'option');
 $data->features = get_field('features');
 
 if( is_array( $data->features ) && ! empty( $data->features ) ) {
