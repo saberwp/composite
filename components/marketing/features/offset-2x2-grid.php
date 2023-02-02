@@ -1,6 +1,6 @@
 <?php
 
-$data = new ComponentData;
+$data = new \Composite\ComponentData;
 $data->heading = get_field('heading'); // get_field('homepage_offset_2x2_grid_heading', 'option');
 $data->features = get_field('features');
 
