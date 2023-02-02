@@ -158,9 +158,27 @@ function enqueue_login_process_script() {
     wp_enqueue_script( 'login-process', get_template_directory_uri() . '/js/login_process.js', array(), '1.0.0', true );
   }
 
+	/**
+	 * Enqueues the 'register-process' script.
+	 *
+	 * The script is located in the 'js' folder of the current theme directory and is named 'register_process.js'.
+	 * The script is not dependent on any other scripts and is loaded in the footer (true).
+	 *
+	 * @link https://developer.wordpress.org/reference/functions/wp_enqueue_script/
+	 */
 	if (is_page('register')) {
     wp_enqueue_script('register-process', get_template_directory_uri() . '/js/register_process.js', array(), false, true);
   }
+
+	/**
+	 * Enqueues the 'menu' script.
+	 *
+	 * The script is located in the 'js' folder of the current theme directory and is named 'menu.js'.
+	 * The script is not dependent on any other scripts and is loaded in the footer (true).
+	 *
+	 * @link https://developer.wordpress.org/reference/functions/wp_enqueue_script/
+	 */
+	wp_enqueue_script('menu', get_template_directory_uri() . '/js/menu.js', array(), false, true);
 
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_login_process_script' );
