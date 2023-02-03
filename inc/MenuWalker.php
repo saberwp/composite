@@ -40,13 +40,17 @@ class MenuWalker extends \Walker_Nav_Menu {
 		if( $depth > 0 ) {
 			$output .= '<div>';
 			$icon = get_field('icon', $data_object->ID);
+			$iconExists = false;
 			$iconUrl = false;
 			if( is_array( $icon ) ) {
+				$iconExists = true;
 				$iconUrl = $icon['url'];
 			}
-			$output .= '<a href="#" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
-        <img class="w-10 h-10" src="' . $iconUrl . '" />
-        <div class="ml-4">
+			$output .= '<a href="' . $data_object->url . '" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">';
+			if( $iconExists ) {
+				$output .= '<img class="w-10 h-10" src="' . $iconUrl . '" />';
+			}
+      $output .= '<div class="ml-4">
           <p class="text-base font-medium text-gray-900">' . $data_object->title . '</p>
           <p class="mt-1 text-sm text-gray-500">' . $data_object->description . '</p>
         </div>
