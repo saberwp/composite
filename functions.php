@@ -24,6 +24,8 @@ spl_autoload_register( function ( $class_name ) {
 } );
 
 
+
+
 /**
  * Initialize the Login class and run its init() method
  */
@@ -31,6 +33,10 @@ use Composite\Login;
 
 $login = new Login();
 $login->init();
+
+// Init Headers class.
+$headers = new \Composite\Headers;
+$headers->init();
 
 add_action('wp_enqueue_scripts', function() {
 

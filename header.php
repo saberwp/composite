@@ -26,10 +26,12 @@
 
 <?php
 
-require_once(get_template_directory() . '/components/headers/centered-bottom-border/component.php');
-// require_once(get_template_directory() . '/components/headers/branded-stacked-links/component.php');
-//require_once(get_template_directory() . '/components/headers/full-width-flyouts.php');
-//require_once(get_template_directory() . '/components/headers/simple-links-centered.php');
-//require_once(get_template_directory() . '/components/headers/simple-links-left.php');
+$header_default = get_field( 'header_default', 'option' );
+if ( ! $header_default ) {
+	$header_default = 'centered-bottom-border';
+}
+
+$header_path = get_template_directory() . '/components/headers/' . $header_default . '/component.php';
+require_once( $header_path );
 
 ?>
