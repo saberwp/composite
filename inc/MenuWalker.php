@@ -41,14 +41,26 @@ class MenuWalker extends \Walker_Nav_Menu {
 			$output .= '<div>';
 			$icon = get_field('icon', $data_object->ID);
 			$iconExists = false;
-			$iconUrl = false;
+			$iconSvg    = false;
+			$iconUrl    = false;
 			if( is_array( $icon ) ) {
 				$iconExists = true;
 				$iconUrl = $icon['url'];
 			}
+			if( is_array( $icon ) && $icon['mime_type'] === 'image/svg+xml' ) {
+				$filepath = get_attached_file( $icon['id'] );
+				ob_start();
+				require( $filepath );
+				$iconSvg = ob_get_contents();
+				ob_end_clean();
+			}
 			$output .= '<a href="' . $data_object->url . '" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">';
 			if( $iconExists ) {
-				$output .= '<img class="w-10 h-10" src="' . $iconUrl . '" />';
+				if( $iconSvg ) {
+					$output .= $iconSvg;
+				} else {
+					$output .= '<img class="w-10 h-10" src="' . $iconUrl . '" />';
+				}
 			}
       $output .= '<div class="ml-4">
           <p class="text-base font-medium text-gray-900">' . $data_object->title . '</p>
