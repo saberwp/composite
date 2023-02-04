@@ -70,9 +70,8 @@
       <div class="flex space-x-6 md:order-2">
 
 				<?php
-					$social_accounts = get_field('social_accounts', 'option');
-					if( ! empty( $social_accounts )) {
-						foreach( $social_accounts as $social_account ) {
+					if( ! empty( $data->social_accounts )) {
+						foreach( $data->social_accounts as $social_account ) {
 				?>
 
 	        <a href="<?php echo $social_account['url']; ?>" class="text-gray-400 hover:text-gray-300">

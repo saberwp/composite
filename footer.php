@@ -3,7 +3,7 @@
 // Set default footer if none is set in option "footer_default".
 $footer_default = get_field( 'footer_default', 'option' );
 if ( ! $footer_default ) {
-	$footer_default = 'default';
+	$footer_default = '4-column-with-newsletter-dark';
 }
 
 // Load component manifest and set data for the component.
@@ -13,19 +13,35 @@ require $manifest_path;
 $manifestJson = ob_get_contents();
 ob_end_clean();
 $manifest = json_decode( $manifestJson );
-$data = $manifest->data;
 
-// Company name.
-$company_name = get_field('company_name', 'option');
-if( $company_name ) {
-	$data->company_name = $company_name;
+// Do data setting only if manifest has data property.
+if( isset( $manifest->data ) ) {
+	$data = $manifest->data;
+
+	// Company name.
+	$company_name = get_field('company_name', 'option');
+	if( $company_name ) {
+		$data->company_name = $company_name;
+	}
+
+	// Company mission statement.
+	$company_mission = get_field('company_mission', 'option');
+	if( $company_mission ) {
+		$data->company_mission = $company_mission;
+	}
+
+	// Social accounts.
+	$social_accounts = get_field('social_accounts', 'option');
+	if( ! empty( $social_accounts )) {
+		$data->social_accounts = array(); // Reset social accounts array.
+		foreach( $social_accounts as $social_account ) {
+			$data->social_accounts[] = $social_account;
+		}
+	}
+
 }
 
-// Company mission statement.
-$company_mission = get_field('company_mission', 'option');
-if( $company_mission ) {
-	$data->company_mission = $company_mission;
-}
+
 
 $component_path = get_template_directory() . '/components/footers/' . $footer_default . '/component.php';
 require $component_path;

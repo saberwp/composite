@@ -1,4 +1,8 @@
 {
 	"name": "social-links-only",
-	"title": "Social Links Only"
+	"title": "Social Links Only",
+	"data": {
+		"company_name": "Frederick Corp",
+		"social_accounts": []
+	}
 }
