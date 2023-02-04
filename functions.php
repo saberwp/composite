@@ -109,6 +109,10 @@ add_action('init', function() {
 // See reference tutorial https://monsterspost.com/add-navigation-menus-wordpress-theme/.
 add_action('init', function() {
 	register_nav_menu('primary-menu',__( 'Primary Menu' ));
+	register_nav_menu('footer_1',( 'Footer 1' ));
+	register_nav_menu('footer_2',( 'Footer 2' ));
+	register_nav_menu('footer_3',( 'Footer 3' ));
+	register_nav_menu('footer_4',( 'Footer 4' ));
 });
 
 // Add all ACF fields defined in code.
