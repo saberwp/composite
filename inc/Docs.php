@@ -35,11 +35,11 @@ class Docs {
 	}
 
 	/**
-	 * Get the child pages of the terms.
+	 * Get the child pages of a single term ID.
 	 *
 	 * @return array An array of docs, each represented as an array with 'id', 'title', and 'children' keys.
 	 */
-	public function get_child_pages() {
+	public function get_child_pages( $term_id ) {
 		$docs = array();
 
 		// Retrieve the pages under the parent term.
@@ -49,7 +49,7 @@ class Docs {
 				array(
 					'taxonomy' => 'doc',
 					'field'    => 'term_id',
-					'terms'    => $this->parent_term->term_id,
+					'terms'    => $term_id,
 				),
 			),
 			'orderby'  => 'menu_order',
@@ -65,7 +65,14 @@ class Docs {
 			);
 		}
 
-		$this->doc_pages = $docs;
+		return $docs;
+	}
+
+	public function menuRender() {
+
+		$component_path = get_template_directory() . '/components/docs/docs-menu/component.php';
+		require_once( $component_path );
+
 	}
 
 }
