@@ -1,4 +1,9 @@
 {
 	"name": "4-column-with-company-mission",
-	"title": "4-Column with Company Mission"
+	"title": "4-Column with Company Mission",
+	"data": {
+		"date": "current_year",
+		"company_name": "Your Company, Inc",
+		"company_mission": "Making the world a better place through constructing elegant hierarchies."
+	}
 }
