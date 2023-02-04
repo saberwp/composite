@@ -38,6 +38,10 @@ $login->init();
 $headers = new \Composite\Headers;
 $headers->init();
 
+// Init Footers class.
+$footers = new \Composite\Footers;
+$footers->init();
+
 add_action('wp_enqueue_scripts', function() {
 
 	wp_enqueue_style(

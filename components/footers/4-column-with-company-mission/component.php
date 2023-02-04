@@ -57,8 +57,8 @@ $data->year = date('Y');
 							wp_nav_menu(
 								array(
 									'theme_location'  => 'footer_1',
-									// 'menu_class'      => 'flex gap-4',
-									// 'walker'          => new \Composite\MenuWalker(),
+									'menu_class'      => 'mt-6 space-y-4',
+									'walker'          => new \Composite\MenuWalkerFooter(),
 									'container_class' => 'composite-menu',
 									'depth'           => 1,
 								)
@@ -71,8 +71,8 @@ $data->year = date('Y');
 							wp_nav_menu(
 								array(
 									'theme_location'  => 'footer_2',
-									// 'menu_class'      => 'flex gap-4',
-									// 'walker'          => new \Composite\MenuWalker(),
+									'menu_class'      => 'mt-6 space-y-4',
+									'walker'          => new \Composite\MenuWalkerFooter(),
 									'container_class' => 'composite-menu',
 									'depth'           => 1,
 								)
@@ -87,8 +87,8 @@ $data->year = date('Y');
 							wp_nav_menu(
 								array(
 									'theme_location'  => 'footer_3',
-									// 'menu_class'      => 'flex gap-4',
-									// 'walker'          => new \Composite\MenuWalker(),
+									'menu_class'      => 'mt-6 space-y-4',
+									'walker'          => new \Composite\MenuWalkerFooter(),
 									'container_class' => 'composite-menu',
 									'depth'           => 1,
 								)
@@ -101,8 +101,8 @@ $data->year = date('Y');
 							wp_nav_menu(
 								array(
 									'theme_location'  => 'footer_4',
-									// 'menu_class'      => 'flex gap-4',
-									// 'walker'          => new \Composite\MenuWalker(),
+									'menu_class'      => 'mt-6 space-y-4',
+									'walker'          => new \Composite\MenuWalkerFooter(),
 									'container_class' => 'composite-menu',
 									'depth'           => 1,
 								)
