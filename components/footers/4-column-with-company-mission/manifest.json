@@ -4,6 +4,7 @@
 	"data": {
 		"date": "current_year",
 		"company_name": "Your Company, Inc",
-		"company_mission": "Making the world a better place through constructing elegant hierarchies."
+		"company_mission": "Making the world a better place through constructing elegant hierarchies.",
+		"social_accounts": []
 	}
 }

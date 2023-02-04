@@ -33,15 +33,32 @@ if( isset( $manifest->data ) ) {
 	// Social accounts.
 	$social_accounts = get_field('social_accounts', 'option');
 	if( ! empty( $social_accounts )) {
+
 		$data->social_accounts = array(); // Reset social accounts array.
 		foreach( $social_accounts as $social_account ) {
 			$data->social_accounts[] = $social_account;
 		}
+
+		$sa = new \Composite\SocialAccounts();
+		$services = $sa->getServices();
+
+		$social_services = array();
+		foreach ($data->social_accounts as $datum) {
+		  $service = $datum["service"];
+		  $url = $datum["url"];
+
+		  foreach ($services as $social_service) {
+		    if ($social_service->key === $service) {
+		      $social_service->setUrl($url);
+		      $social_services[] = $social_service;
+		      break;
+		    }
+		  }
+		}
+
 	}
 
 }
-
-
 
 $component_path = get_template_directory() . '/components/footers/' . $footer_default . '/component.php';
 require $component_path;
