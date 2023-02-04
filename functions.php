@@ -42,6 +42,10 @@ $headers->init();
 $footers = new \Composite\Footers;
 $footers->init();
 
+// Init Social Accounts.
+$socialAccounts = new \Composite\SocialAccounts;
+$socialAccounts->init();
+
 add_action('wp_enqueue_scripts', function() {
 
 	wp_enqueue_style(

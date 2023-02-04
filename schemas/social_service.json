@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/schemas/social-service.json",
+  "title": "Social Service",
+  "type": "object",
+  "definitions": {
+    "social_service": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "domain": {
+          "type": "string"
+        },
+        "icons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "key",
+        "title",
+        "domain",
+        "icons"
+      ],
+      "namespace": "\\Composite\\SocialService"
+    }
+  },
+  "properties": {
+    "social_service": {
+      "$ref": "#/definitions/social_service"
+    }
+  },
+  "required": [
+    "social_service"
+  ],
+  "example": {
+    "social_service": {
+      "key": "facebook",
+      "title": "Facebook",
+      "domain": "facebook.com",
+      "icons": [
+        "/assets/icons/social/facebook.svg"
+      ]
+    }
+  }
+}
