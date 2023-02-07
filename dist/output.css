@@ -1604,6 +1604,10 @@ select {
   height: 100vh;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-16 {
   height: 4rem;
 }
@@ -1616,20 +1620,12 @@ select {
   height: 2.5rem;
 }
 
-.h-7 {
-  height: 1.75rem;
-}
-
 .h-8 {
   height: 2rem;
 }
 
 .h-12 {
   height: 3rem;
-}
-
-.h-full {
-  height: 100%;
 }
 
 .h-4 {
@@ -2165,6 +2161,14 @@ select {
 
 .fill-gray-300 {
   fill: #d1d5db;
+}
+
+.fill-slate-300 {
+  fill: #cbd5e1;
+}
+
+.fill-green-600 {
+  fill: #16a34a;
 }
 
 .object-cover {
