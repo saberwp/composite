@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 if( function_exists('acf_add_local_field_group') ):
 
@@ -299,8 +299,59 @@ array(
 ));
 
 acf_add_local_field_group(array(
+'key' => 'group_63e06c9cf117b',
+'title' => 'Composite > Header',
+'fields' => array(
+array(
+'key' => 'field_63dd61ad66810',
+'label' => 'Header Default',
+'name' => 'header_default',
+'aria-label' => '',
+'type' => 'button_group',
+'instructions' => 'The default header component that will be used on every page of the site, unless it is overriden by a page template or settings for a page or post.',
+'required' => 1,
+'conditional_logic' => 0,
+'wrapper' => array(
+	'width' => '',
+	'class' => '',
+	'id' => '',
+),
+'choices' => array(
+	'branded-stacked-links' => 'Branded Stacked Links',
+	'centered-bottom-border' => 'Centered Bottom Border',
+	'full-width-flyouts' => 'Full Width Flyouts',
+	'simple-links-centered' => 'Simple Links Centered',
+	'simple-links-left' => 'Simple Links Left',
+),
+'default_value' => 'centered-bottom-border',
+'return_format' => 'value',
+'allow_null' => 0,
+'layout' => 'vertical',
+),
+),
+'location' => array(
+array(
+array(
+	'param' => 'options_page',
+	'operator' => '==',
+	'value' => 'acf-options-header',
+),
+),
+),
+'menu_order' => 0,
+'position' => 'normal',
+'style' => 'default',
+'label_placement' => 'top',
+'instruction_placement' => 'label',
+'hide_on_screen' => '',
+'active' => true,
+'description' => '',
+'show_in_rest' => 0,
+));
+
+acf_add_local_field_group(array(
 'key' => 'group_63b3f012cbbe3',
-'title' => 'Composite > Main',
+'title' => 'Composite > Index',
 'fields' => array(
 array(
 'key' => 'field_63b3f0136da61',
@@ -360,32 +411,6 @@ array(
 'placeholder' => '',
 'mode' => 'htmlmixed',
 'theme' => 'monokai',
-),
-array(
-'key' => 'field_63dd61ad66810',
-'label' => 'Header Default',
-'name' => 'header_default',
-'aria-label' => '',
-'type' => 'button_group',
-'instructions' => 'The default header component that will be used on every page of the site, unless it is overriden by a page template or settings for a page or post.',
-'required' => 1,
-'conditional_logic' => 0,
-'wrapper' => array(
-	'width' => '',
-	'class' => '',
-	'id' => '',
-),
-'choices' => array(
-	'branded-stacked-links' => 'Branded Stacked Links',
-	'centered-bottom-border' => 'Centered Bottom Border',
-	'full-width-flyouts' => 'Full Width Flyouts',
-	'simple-links-centered' => 'Simple Links Centered',
-	'simple-links-left' => 'Simple Links Left',
-),
-'default_value' => 'centered-bottom-border',
-'return_format' => 'value',
-'allow_null' => 0,
-'layout' => 'horizontal',
 ),
 array(
 'key' => 'field_63dde61da11aa',
