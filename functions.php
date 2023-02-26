@@ -64,6 +64,14 @@ add_action('wp_enqueue_scripts', function() {
 		'all'
 	);
 
+	wp_enqueue_script(
+		'composite-animate',
+		get_template_directory_uri() . '/js/animate.js',
+		array('backbone'),
+		time(),
+		1
+	);
+
 });
 
 
