@@ -1989,51 +1989,6 @@ array(
 ));
 
 acf_add_local_field_group(array(
-'key' => 'group_63b61926be910',
-'title' => 'Blog',
-'fields' => array(
-array(
-'key' => 'field_63b61927d0ec3',
-'label' => '',
-'name' => '',
-'aria-label' => '',
-'type' => 'text',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-	'width' => '',
-	'class' => '',
-	'id' => '',
-),
-'default_value' => '',
-'maxlength' => '',
-'placeholder' => '',
-'prepend' => '',
-'append' => '',
-),
-),
-'location' => array(
-array(
-array(
-	'param' => 'post_type',
-	'operator' => '==',
-	'value' => 'post',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'default',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => '',
-'active' => true,
-'description' => '',
-'show_in_rest' => 0,
-));
-
-acf_add_local_field_group(array(
 'key' => 'group_63b5ffa1d01d7',
 'title' => 'Blog Main',
 'fields' => array(
@@ -2378,54 +2333,6 @@ array(
 	'param' => 'options_page',
 	'operator' => '==',
 	'value' => 'theme-general-settings',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'default',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => '',
-'active' => true,
-'description' => '',
-'show_in_rest' => 0,
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_63dd851894b77',
-'title' => 'Doc Sections',
-'fields' => array(
-array(
-'key' => 'field_63dd8519c939b',
-'label' => 'Doc Category',
-'name' => 'doc_category',
-'aria-label' => '',
-'type' => 'taxonomy',
-'instructions' => 'Choose the main doc category. This will be used to make the doc menu.',
-'required' => 1,
-'conditional_logic' => 0,
-'wrapper' => array(
-	'width' => '',
-	'class' => '',
-	'id' => '',
-),
-'taxonomy' => 'doc',
-'add_term' => 1,
-'save_terms' => 0,
-'load_terms' => 0,
-'return_format' => 'id',
-'field_type' => 'select',
-'allow_null' => 0,
-'multiple' => 0,
-),
-),
-'location' => array(
-array(
-array(
-	'param' => 'page_template',
-	'operator' => '==',
-	'value' => 'page-docs.php',
 ),
 ),
 ),
