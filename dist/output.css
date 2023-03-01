@@ -1497,11 +1497,6 @@ select {
   margin-bottom: 1rem;
 }
 
-.my-12 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
 .-my-2 {
   margin-top: -0.5rem;
   margin-bottom: -0.5rem;
@@ -1623,6 +1618,10 @@ select {
   height: 1rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-40 {
   height: 10rem;
 }
@@ -1637,10 +1636,6 @@ select {
 
 .h-16 {
   height: 4rem;
-}
-
-.h-full {
-  height: 100%;
 }
 
 .h-6 {
@@ -1803,10 +1798,6 @@ select {
   flex-basis: 33.333333%;
 }
 
-.basis-8\/12 {
-  flex-basis: 66.666667%;
-}
-
 .origin-top-right {
   transform-origin: top right;
 }
@@ -1950,12 +1941,12 @@ select {
   gap: 1.5rem;
 }
 
-.gap-8 {
-  gap: 2rem;
-}
-
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-7 {
@@ -2179,6 +2170,11 @@ select {
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
 .bg-gray-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
@@ -2239,11 +2235,6 @@ select {
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
-.bg-gray-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-}
-
 .bg-indigo-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
@@ -2272,11 +2263,6 @@ select {
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .fill-gray-300 {
@@ -3001,6 +2987,11 @@ select {
     order: 1;
   }
 
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }
@@ -3019,6 +3010,10 @@ select {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:max-w-2xl {
+    max-width: 42rem;
   }
 
   .md\:max-w-xl {
@@ -3058,6 +3053,11 @@ select {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .md\:py-16 {
