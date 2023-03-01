@@ -64,6 +64,14 @@ add_action('wp_enqueue_scripts', function() {
 		'all'
 	);
 
+	wp_enqueue_script(
+		'composite-animate',
+		get_template_directory_uri() . '/js/animate.js',
+		array('backbone'),
+		time(),
+		1
+	);
+
 });
 
 
@@ -97,19 +105,6 @@ add_filter( 'upload_mimes', function ( $types ) {
 	$types['json'] = 'text/plain';
 	return $types;
 });
-
-add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
-
-		global $wp_version;
-
-    $filetype = wp_check_filetype( $filename, $mimes );
-
-    //var_dump($filetype);
-		error_log('FILETYPE:');
-		error_log( print_r($filetype,1) );
-		//die();
-
-}, 10, 4 );
 
 /* Add theme supports */
 add_action('after_setup_theme', function() {

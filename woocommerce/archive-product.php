@@ -18,7 +18,11 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
+?>
 
+<div class="max-w-xl mx-auto my-8">
+
+<?php
 /**
  * Hook: woocommerce_before_main_content.
  *
@@ -86,6 +90,9 @@ do_action( 'woocommerce_after_main_content' );
  *
  * @hooked woocommerce_get_sidebar - 10
  */
-do_action( 'woocommerce_sidebar' );
+// do_action( 'woocommerce_sidebar' );
+?>
 
+</div><!-- /close .max-w-xl -->
+<?php
 get_footer( 'shop' );

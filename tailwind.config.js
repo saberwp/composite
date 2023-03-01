@@ -1,12 +1,12 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-const skeletoner =  require('../../plugins/skeletoner/tailwind.json');
 
 module.exports = {
   content: [
 		"./src/**/*.{html,js}",
 		"./templates/**/*.php",
 		"./**/*.php",
-		'../../plugins/skeletoner/tailwind.json',
+		'../../plugins/skeletoner/tailwind.json', // @TODO make conditional!
+		'../../plugins/saber-solutions/**/*.php', // @TODO make conditional!
 	],
   theme: {
     extend: {
