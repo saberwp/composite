@@ -1,4 +1,16 @@
-<?php global $post; ?>
+<?php
+
+/* Set content to be displayed either from the post content, or from passed data. */
+$content = '';
+if( ! $data ) {
+	global $post;
+	$content = $post->post_content;
+} else {
+	$content = $data->content;
+}
+
+
+?>
 
 <div class="relative overflow-hidden bg-white py-16">
   <div class="hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full lg:[overflow-anchor:none]">
@@ -44,7 +56,7 @@
 			</p>
     </div>
     <div class="prose prose-lg prose-indigo mx-auto mt-6 text-gray-500">
-      <?php echo $post->post_content; ?>
+      <?php echo $content ?>
     </div>
   </div>
 </div>

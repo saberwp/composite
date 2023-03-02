@@ -7,6 +7,7 @@ module.exports = {
 		"./**/*.php",
 		'../../plugins/skeletoner/tailwind.json', // @TODO make conditional!
 		'../../plugins/saber-solutions/**/*.php', // @TODO make conditional!
+		'../../plugins/saber-snippets/**/*.php', // @TODO make conditional!
 	],
   theme: {
     extend: {
