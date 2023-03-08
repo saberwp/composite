@@ -1,1 +1,0 @@
-DOC TERM COMP
