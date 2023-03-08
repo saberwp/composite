@@ -230,5 +230,5 @@ add_action( 'wp_enqueue_scripts', 'enqueue_login_process_script' );
  */
 $taxonomy_files = glob( get_template_directory() . '/wp/taxonomies/*.php' );
 foreach ( $taxonomy_files as $file ) {
-  require $file;
+  // require $file;
 }

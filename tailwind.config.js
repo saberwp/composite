@@ -8,6 +8,9 @@ module.exports = {
 		'../../plugins/skeletoner/tailwind.json', // @TODO make conditional!
 		'../../plugins/saber-solutions/**/*.php', // @TODO make conditional!
 		'../../plugins/saber-snippets/**/*.php', // @TODO make conditional!
+		'../../plugins/saber-dashboard/**/*.php', // @TODO make conditional!
+		'../../plugins/f2/**/*.*', // @TODO make conditional!
+		'../../plugins/saber-lms/**/*.*', // @TODO make conditional!
 	],
   theme: {
     extend: {
