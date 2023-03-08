@@ -208,17 +208,6 @@ function enqueue_login_process_script() {
 	 */
 	wp_enqueue_script('menu', get_template_directory_uri() . '/js/menu.js', array(), false, true);
 
-	/**
-	 * Enqueue `docs-script` script only if the page is using the "Docs Page" template.
-	 *
-	 * This function checks if the current page is using the "Docs Page" template (page-docs.php)
-	 * and if it is, then the `docs-script` script is enqueued. The script is located in the
-	 * /js/docs.js file and is loaded in the footer for better performance.
-	 */
-	 if ( is_page_template( 'page-docs.php' ) ) {
-	 	wp_enqueue_script( 'docs-script', get_template_directory_uri() . '/js/docs.js', array( 'jquery' ), '1.0.0', true );
-	 }
-
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_login_process_script' );
 
