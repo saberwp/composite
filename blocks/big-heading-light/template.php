@@ -8,4 +8,4 @@ $component->setContent('heading', get_field('heading'));
 
 ?>
 
-<h2 class="text-5xl font-light"><?php echo $component->content['heading']; ?></h2>
+<h2 class="text-5xl font-light my-4"><?php echo $component->content['heading']; ?></h2>

@@ -123,6 +123,9 @@ add_action('init', function() {
 	register_block_type( get_template_directory() . '/blocks/stat/block.json' );
 	register_block_type( get_template_directory() . '/blocks/timeline/block.json' );
 	register_block_type( get_template_directory() . '/blocks/cta/murphy/block.json' );
+	register_block_type( get_template_directory() . '/blocks/text/paragraph/block.json' );
+	register_block_type( get_template_directory() . '/blocks/sections/split2/block.json' );
+	register_block_type( get_template_directory() . '/blocks/sections/center-icon/block.json' );
 });
 
 // Register menus.
