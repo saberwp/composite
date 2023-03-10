@@ -1,53 +1,6 @@
 <?php get_header(); ?>
+<?php the_content(); ?>
 
-<!-- Intro. -->
-<div class="p-4 md:max-w-3xl md:mx-auto">
-	<h1 class="font-semibold text-2xl">
-		<?php the_title(); ?>
-	</h1>
-	<?php the_content(); ?>
-</div>
-
-<!-- Points. -->
-<div class="bg-black text-white p-12">
-	<h2 class="text-2xl font-medium">
-		Points Awards
-	</h2>
-	<p>
-		Points are awarded as a means to track progression. This enables a stable numeric construct for issuing badges, level progression and other facets of gamification.
-	</p>
-	<div>
-		<h3 class="my-4 text-2xl">Points Storage</h3>
-		<p>
-			Points are tracked in a custom database table that associates points with the user ID that earned them.
-		</p>
-
-	</div>
-
-	<!-- Points Earned Stat. -->
-	<div class="flex flex-col gap-1 justify-center items-center bg-green-800 w-48 p-4 rounded-lg my-2">
-		<h2 class="font-bold text-3xl">238</h2>
-		<h4 class="text-base">Points Earned</h4>
-	</div>
-
-	<!-- Points Earned Stat. -->
-	<div class="flex flex-col gap-1 justify-center items-center bg-blue-800 w-48 p-4 rounded-lg my-2">
-		<h2 class="font-bold text-3xl">52.3</h2>
-		<h4 class="text-base">Daily Points Average</h4>
-	</div>
-
-	<?php
-
-		// Points this month stat.
-		$component = new \Composite\ComponentStatSimple;
-		$component->number = 68;
-		$component->label  = 'Points This Month';
-		$component->background_color = 'bg-slate-400';
-		require( get_template_directory() . '/components/gamify/stats/simple/template.php' );
-
-	?>
-
-</div>
 
 <!-- Levels -->
 <section class="bg-green-200 text-slate-800 p-8">

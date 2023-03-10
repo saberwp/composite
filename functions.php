@@ -118,6 +118,8 @@ add_action('after_setup_theme', function() {
 add_action('init', function() {
 	register_block_type( get_template_directory() . '/blocks/offset-2x2-grid/block.json' );
 	register_block_type( get_template_directory() . '/blocks/section/block.json' );
+	register_block_type( get_template_directory() . '/blocks/big-heading-light/block.json' );
+	register_block_type( get_template_directory() . '/blocks/stat/block.json' );
 });
 
 // Register menus.
