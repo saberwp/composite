@@ -5,6 +5,7 @@ module.exports = {
 		"./src/**/*.{html,js}",
 		"./templates/**/*.php",
 		"./**/*.php",
+		"./**/*.json",
 		'../../plugins/skeletoner/tailwind.json', // @TODO make conditional!
 		'../../plugins/saber-solutions/**/*.php', // @TODO make conditional!
 		'../../plugins/saber-snippets/**/*.php', // @TODO make conditional!
