@@ -126,6 +126,7 @@ add_action('init', function() {
 	register_block_type( get_template_directory() . '/blocks/text/paragraph/block.json' );
 	register_block_type( get_template_directory() . '/blocks/sections/split2/block.json' );
 	register_block_type( get_template_directory() . '/blocks/sections/center-icon/block.json' );
+	register_block_type( get_template_directory() . '/blocks/lists/4-up/block.json' );
 });
 
 // Register menus.

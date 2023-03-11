@@ -1904,6 +1904,10 @@ select {
   max-width: 28rem;
 }
 
+.max-w-4xl {
+  max-width: 56rem;
+}
+
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -1918,6 +1922,10 @@ select {
 
 .max-w-3xl {
   max-width: 48rem;
+}
+
+.max-w-6xl {
+  max-width: 72rem;
 }
 
 .flex-1 {
@@ -1944,16 +1952,16 @@ select {
   flex-basis: 66.666667%;
 }
 
-.basis-1\/2 {
-  flex-basis: 50%;
-}
-
 .basis-5\/12 {
   flex-basis: 41.666667%;
 }
 
 .basis-7\/12 {
   flex-basis: 58.333333%;
+}
+
+.basis-1\/4 {
+  flex-basis: 25%;
 }
 
 .origin-top-right {
@@ -2611,6 +2619,10 @@ select {
   fill: #d1d5db;
 }
 
+.fill-gray-600 {
+  fill: #4b5563;
+}
+
 .fill-green-600 {
   fill: #16a34a;
 }
@@ -2623,8 +2635,12 @@ select {
   fill: rgb(255 255 255 / 0.5);
 }
 
-.fill-gray-600 {
-  fill: #4b5563;
+.fill-gray-400 {
+  fill: #9ca3af;
+}
+
+.fill-gray-900 {
+  fill: #111827;
 }
 
 .object-cover {

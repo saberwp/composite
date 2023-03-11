@@ -24,8 +24,10 @@ file_put_contents( get_template_directory() . '/tailwind.json', json_encode( $ta
 ?>
 
 <section class="p-8 <?php echo $background_color; ?> text-white">
-	<h2 class="font-bold text-2xl">
-		<?php echo get_field('heading'); ?>
-	</h2>
-	<InnerBlocks />
+	<div class="md:max-w-xl md:mx-auto">
+		<h2 class="font-bold text-5xl">
+			<?php echo get_field('heading'); ?>
+		</h2>
+		<InnerBlocks />
+	</div>
 </section>
