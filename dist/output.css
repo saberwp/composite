@@ -3718,6 +3718,10 @@ select {
     max-width: 48rem;
   }
 
+  .md\:max-w-5xl {
+    max-width: 64rem;
+  }
+
   .md\:flex-1 {
     flex: 1 1 0%;
   }
