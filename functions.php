@@ -23,8 +23,8 @@ spl_autoload_register( function ( $class_name ) {
     }
 } );
 
-
-
+// Require Component Classes.
+require_once( get_template_directory() . '/components/gamify/stats/simple/ComponentStatSimple.php' );
 
 /**
  * Initialize the Login class and run its init() method
@@ -116,10 +116,17 @@ add_action('after_setup_theme', function() {
 
 /* Do block registrations. */
 add_action('init', function() {
-	$result = register_block_type( get_template_directory() . '/blocks/offset-2x2-grid/block.json' );
-	if( ! $result ) {
-		var_dump( 'Block type could not regsie');
-	}
+	register_block_type( get_template_directory() . '/blocks/offset-2x2-grid/block.json' );
+	register_block_type( get_template_directory() . '/blocks/section/block.json' );
+	register_block_type( get_template_directory() . '/blocks/section2/block.json' );
+	register_block_type( get_template_directory() . '/blocks/big-heading-light/block.json' );
+	register_block_type( get_template_directory() . '/blocks/stat/block.json' );
+	register_block_type( get_template_directory() . '/blocks/timeline/block.json' );
+	register_block_type( get_template_directory() . '/blocks/cta/murphy/block.json' );
+	register_block_type( get_template_directory() . '/blocks/text/paragraph/block.json' );
+	register_block_type( get_template_directory() . '/blocks/sections/split2/block.json' );
+	register_block_type( get_template_directory() . '/blocks/sections/center-icon/block.json' );
+	register_block_type( get_template_directory() . '/blocks/lists/4-up/block.json' );
 });
 
 // Register menus.

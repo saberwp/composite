@@ -1,0 +1,15 @@
+{
+  "name": "composite/timeline",
+  "title": "Composite Timeline",
+  "description": "Renders a timeline.",
+  "style": [ "file:./style.css" ],
+	"editorStyle": "file:../../dist/output.css",
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["composite", "timeline"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  },
+  "align": "full"
+}

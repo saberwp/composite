@@ -1,0 +1,8 @@
+{
+	"name": "stats/simple",
+	"title": "Simple Stat",
+	"data": {
+		"number": "238",
+		"label": "Total Sales",
+	}
+}
