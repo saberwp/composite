@@ -23,3 +23,6 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+
+<!-- Min height screen fix. -->
+<div class="min-h-screen flex flex-col justify-between">

@@ -1,8 +1,9 @@
-<footer class="bg-gray-100 text-gray-400 text-xs">
-	<div class="max-w-xl mx-auto p-4 text-center">
-		&copy; Copyright 2023 SaberWP. All Rights Reserved.
-	</div>
-</footer>
+	<footer class="text-sm">
+		<div class="max-w-5xl mx-auto p-2 text-center text-gray-800 font-medium">
+			&copy; 2023 SaberWP. All Rights Reserved.
+		</div>
+	</footer>
+</div><!-- Flex to create min-h-screen -->
 
 <?php wp_footer(); ?>
 </body>
