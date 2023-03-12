@@ -1694,6 +1694,10 @@ select {
   margin-top: -1.5rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .block {
   display: block;
 }
@@ -3745,6 +3749,10 @@ select {
 
   .md\:max-w-3xl {
     max-width: 48rem;
+  }
+
+  .md\:max-w-lg {
+    max-width: 32rem;
   }
 
   .md\:flex-1 {
